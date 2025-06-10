@@ -1,27 +1,77 @@
 # LoginPage
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+Projeto criado com [Angular CLI](https://github.com/angular/angular-cli) — uma página de login moderna, pronta para customização e integração com backends de autenticação.
 
-## Development server
+## ✨ Funcionalidades
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Formulário de login:** Entrada de e-mail e senha, com validação (senha mínima de 6 caracteres).
+- **Layout responsivo:** Interface amigável, personalizável via SCSS.
+- **Feedback ao usuário:** Mensagens de sucesso e erro usando Toastr.
+- **Armazenamento seguro:** Token salvo na sessão do navegador após login bem-sucedido.
+- **Componentização:** Layout e campos desacoplados, facilitando manutenção e extensão.
 
-## Code scaffolding
+## 🚀 Como rodar o projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/Clizan/login-page.git
+   cd login-page
+   ```
 
-## Build
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. **Inicie o servidor de desenvolvimento:**
+   ```bash
+   ng serve
+   ```
+   Acesse `http://localhost:4200/` no navegador.
 
-## Running unit tests
+## 🛠️ Estrutura Principal
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- `src/app/pages/login/login.component.ts` — Componente principal da página de login, controla o formulário e integra com o serviço de autenticação.
+- `src/app/components/default-login-layout/` — Layout base reutilizável para telas de autenticação.
+- `src/app/services/login.service.ts` — Serviço responsável por autenticar o usuário e armazenar o token.
+- `src/app/types/login-response.types.ts` — Tipagem para resposta do login.
+- `src/styles/variables.scss` — Variáveis globais de estilo.
 
-## Running end-to-end tests
+## 📦 Comandos úteis
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **Gerar novo componente:**
+  ```bash
+  ng generate component nome-do-componente
+  ```
+- **Build do projeto:**
+  ```bash
+  ng build
+  ```
+- **Rodar testes unitários:**
+  ```bash
+  ng test
+  ```
+- **Rodar testes E2E:**
+  ```bash
+  ng e2e
+  ```
 
-## Further help
+## 🖼️ Layout
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+A interface possui:
+- Logo customizável
+- Campos de e-mail e senha
+- Botões de Login e Signup
+- Feedback visual para ações e validações
+
+## 📝 Customização
+
+Edite os arquivos SCSS nos componentes para alterar cores, fontes e espaçamentos de acordo com sua identidade visual.
+
+## 🤝 Contribuição
+
+Pull requests são bem-vindos! Para maiores informações, abra uma issue.
+
+---
+
+> Para mais informações sobre comandos Angular CLI, consulte a [documentação oficial](https://angular.io/cli).
